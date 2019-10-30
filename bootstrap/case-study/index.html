@@ -13,6 +13,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src="barchart.js"></script>
 </head>
 
 <body>
@@ -99,11 +100,13 @@
                                         Start date
                                     </div>
                                     <div class="col">
-                                        <input type="date" value="2016-01-01"/>
+                                        <input type="date" value="2016-01-01" />
                                     </div>
                                 </div>
                                 <canvas id="annual-chart" width="400" height="400"></canvas>
-                                <script src="barchart.js"></script>
+                                <script>
+                                    loadBarChartData('annual-chart', 'annualData');
+                                </script>
                             </div>
                             <div class="tab-pane fade" id="monthly" role="tabpanel" aria-labelledby="monthly-tab">
                                 <div class="row">
@@ -111,9 +114,13 @@
                                         Start date
                                     </div>
                                     <div class="col">
-                                        <input type="date" value="2018-09-01"/>
+                                        <input type="date" value="2018-09-01" />
                                     </div>
                                 </div>
+                                <canvas id="monthly-chart" width="400" height="400"></canvas>
+                                <script>
+                                    loadBarChartData('monthly-chart', 'monthlyData');
+                                </script>
                             </div>
                             <div class="tab-pane fade" id="custom" role="tabpanel" aria-labelledby="custom-tab">
                                 <div class="row">
