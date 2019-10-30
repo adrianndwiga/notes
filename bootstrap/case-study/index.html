@@ -12,6 +12,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+
+    <script id="" type="application/json"></script>
 </head>
 
 <body>
@@ -98,28 +101,51 @@
                                         Start date
                                     </div>
                                     <div class="col">
-                                        <input type="date"/>
+                                        <input type="date" />
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="monthly" role="tabpanel" aria-labelledby="monthly-tab">
-                                    <div class="row">
-                                            <div class="col">
-                                                Start date
-                                            </div>
-                                            <div class="col">
-                                                <input type="date"/>
-                                            </div>
-                                        </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Start date
+                                    </div>
+                                    <div class="col">
+                                        <input type="date" />
+                                    </div>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="custom" role="tabpanel" aria-labelledby="custom-tab">
                                 <div class="row">
                                     <div class="col">
-                                        <input class="form-control" type="date"/>
+                                        <input class="form-control" type="date" value="2019-09-01" />
                                     </div>
                                     <div class="col">
-                                        <input class="form-control" type="date" />
+                                        <input class="form-control" type="date" value="2019-11-01" />
                                     </div>
+                                    <canvas id="cusom-chart" width="400" height="400"></canvas>
+                                    <script>
+                                        var ctx = document.getElementById('cusom-chart').getContext('2d');
+                                        console.log(ctx);
+                                        var data = {
+                                            datasets: [{
+                                                data: [100.0, 250.99, (250.99 - 100.0)],
+                                                backgroundColor: ['Red', 'Black', 'Green']
+                                            }],
+
+                                            // These labels appear in the legend and in the tooltips when hovering different arcs
+                                            labels: [
+                                                'Expences',
+                                                'Sales',
+                                                'Differences'
+                                            ]
+                                        };
+                                        new Chart(ctx, {
+                                            type: 'pie',
+                                            data: data,
+                                            options: Chart.defaults.pie
+                                        });
+                                    </script>
                                 </div>
                             </div>
                         </div>
