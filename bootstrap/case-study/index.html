@@ -138,29 +138,7 @@
                                         <input class="form-control" type="date" value="2019-11-01" />
                                     </div>
                                     <canvas id="cusom-chart" width="400" height="400"></canvas>
-                                    <script>
-                                        var ctx = document.getElementById('cusom-chart').getContext('2d');
-                                        console.log(ctx);
-                                        var data = {
-                                            datasets: [{
-                                                data: [100.0, 250.99, (250.99 - 100.0)],
-                                                backgroundColor: ['Red', 'Black', 'Green'],
-                                                hoverBackgroundColor: ['Red', 'Black', 'Green']
-                                            }],
-
-                                            // These labels appear in the legend and in the tooltips when hovering different arcs
-                                            labels: [
-                                                'Expences',
-                                                'Sales',
-                                                'Differences'
-                                            ]
-                                        };
-                                        new Chart(ctx, {
-                                            type: 'pie',
-                                            data: data,
-                                            options: Chart.defaults.pie
-                                        });
-                                    </script>
+                                    <script src="piechart.js"></script>
                                 </div>
                             </div>
                         </div>
