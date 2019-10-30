@@ -22,12 +22,14 @@ var annualData = [
     }
 ];
 
-annualData.map()
-
 var data = {
     datasets: [{
             label: 'Sales',
             data: annualData.map(d => d.sales)
+        }, 
+        {
+            label: 'Expences',
+            data: annualData.map(d => d.expences)
         },
     ],
 
