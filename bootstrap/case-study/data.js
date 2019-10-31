@@ -34,7 +34,7 @@ Date.prototype.formatDate = function(format) {
     const selectedFormat = dateFormats[format];
 
     if (!selectedFormat) {
-        throw Error('Unsupported date format');
+        throw Error(`Unsupported date format ${format}`);
     }
 
     return selectedFormat(this);
