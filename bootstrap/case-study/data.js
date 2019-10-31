@@ -39,12 +39,6 @@ const shortMonthNames = [
     "Dec"
 ];
 
-const dateFormatLabel = {
-    "custom": () => {},
-    "month": () => {},
-    "annual": () => {}
-};
-
 Date.prototype.formatDate = function(format) {
     const dateFormats = {
         "dd MMMM yyyy": () => {},
@@ -71,7 +65,17 @@ class DateBreakdown {
 }
 
 class Breakdown {
-    constructor(dateLabel, sales, expences, start, end) {
+    constructor(dateLabelFormat, sales, expences, start, end) {
+        const dateFormatLabel = {
+            "custom": () => {
+                const endShortMonthName = shortMonthNames[end.getMonth()];
+                const startShortMonthName = shortMonthNames[start.getMonth()];
+                return `${start.getDate()}/${startShortMonthName}/${start.getFullYear()} - ${end.getFullYear()}/${endShortMonthName}/${end.getFullYear()} `;
+            },
+            "month": () => {},
+            "annual": () => {}
+        };
+
         this.dateBreakdown = new DateBreakdown(dateLabel, start, end);
         this.sales = sales;
         this.expences = expences;
