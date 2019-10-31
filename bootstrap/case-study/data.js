@@ -9,6 +9,13 @@ Date.prototype.lastDayOfTheMonth = function () {
     return d;
 }
 
+const monthNames = [
+    "January", "February", "March",
+    "April", "May", "June", "July",
+    "August", "September", "October",
+    "November", "December"
+];
+
 class DateBreakdown {
     constructor(label, start, end) {
         this.label = label;
@@ -32,7 +39,7 @@ class MonthlyBreakdown {
         const end = new Date();
         const current = new Date(start);
 
-        while(current <= end) {
+        while (current <= end) {
             this.dates.push(new Date(current));
             current.setMonth(current.getMonth() + 1);
         }
@@ -62,7 +69,7 @@ class CustomBreakdown {
         const today = new Date();
         const current = new Date(start);
 
-        while(current <= today) {
+        while (current <= today) {
             this.dates.push(new Date(current));
             current.setMilliseconds(current.getMilliseconds() + milliseconds);
         }
