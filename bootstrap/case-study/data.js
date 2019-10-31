@@ -27,7 +27,15 @@ class Breakdown {
 
 class MonthlyBreakdown {
     constructor(start) {
-        const endDate = new Date();
+        this.dates = [];
+
+        const end = new Date();
+        const current = new Date(start);
+
+        while(current <= end) {
+            this.dates.push(new Date(current));
+            current.setMonth(current.getMonth() + 1);
+        }
 
     }
 }
