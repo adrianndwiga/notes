@@ -23,6 +23,13 @@ const shortMonthNames = [
     "Nov", "Dec"
 ];
 
+const dateFormats = [
+    "dd MMMM yyyy",
+    "dd MMM yyyy",
+    "MMM yyyy",
+    "MMM yy"
+];
+
 class DateBreakdown {
     constructor(label, start, end) {
         this.label = label;
