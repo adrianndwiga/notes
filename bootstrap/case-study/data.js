@@ -10,17 +10,33 @@ Date.prototype.lastDayOfTheMonth = function () {
 }
 
 const monthNames = [
-    "January", "February", "March",
-    "April", "May", "June", "July",
-    "August", "September", "October",
-    "November", "December"
+    "January", 
+    "February", 
+    "March",
+    "April", 
+    "May", 
+    "June", 
+    "July",
+    "August", 
+    "September", 
+    "October",
+    "November", 
+    "December"
 ];
 
 const shortMonthNames = [
-    "Jan", "Feb", "Mar",
-    "Apr", "May", "Jun", "Jul",
-    "Aug", "Sep", "Oct",
-    "Nov", "Dec"
+    "Jan", 
+    "Feb", 
+    "Mar",
+    "Apr", 
+    "May", 
+    "Jun", 
+    "Jul",
+    "Aug", 
+    "Sep", 
+    "Oct",
+    "Nov", 
+    "Dec"
 ];
 
 Date.prototype.formatDate = function(format) {
