@@ -23,12 +23,22 @@ const shortMonthNames = [
     "Nov", "Dec"
 ];
 
-const dateFormats = [
-    "dd MMMM yyyy",
-    "dd MMM yyyy",
-    "MMM yyyy",
-    "MMM yy"
-];
+Date.prototype.formatDate = function(format) {
+    const dateFormats = {
+        "dd MMMM yyyy": () => {},
+        "dd MMM yyyy": () => {},
+        "MMM yyyy": () => {},
+        "MMM yy": () => {}
+    };
+
+    const selectedFormat = dateFormats[format];
+
+    if (!selectedFormat) {
+        throw Error('Unsupported date format');
+    }
+
+    return selectedFormat(this);
+} 
 
 class DateBreakdown {
     constructor(label, start, end) {
