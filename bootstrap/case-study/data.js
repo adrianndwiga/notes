@@ -1,3 +1,14 @@
+Date.prototype.firstDayOfTheMonth = function () {
+    return new Date(this.getFullYear(), this.getMonth(), 1);
+}
+
+Date.prototype.lastDayOfTheMonth = function () {
+    const d = this.firstDayOfTheMonth();
+    d.setMonth(d.getMonth() + 1);
+    d.setDate(d.getDate() - 1)
+    return d;
+}
+
 class DateBreakdown {
     constructor(label, start, end) {
         this.label = label;
