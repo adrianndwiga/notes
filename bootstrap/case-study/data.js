@@ -42,4 +42,10 @@ class AnnualBreakdown {
             currentYear += 1;
         }
     }
-} 
+}
+
+class CustomBreakdown {
+    constructor(start, end) {
+
+    }
+}
