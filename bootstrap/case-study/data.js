@@ -5,3 +5,16 @@ class Breakdown {
         this.expences = expences;    
     }
 }
+
+class MonthlyBreakdown {
+    constructor(start) {
+        const endDate = new Date();
+
+    }
+}
+
+class AnnualBreakdown {
+    constructor(start) {
+        const endDate = new Date();
+    }
+}
