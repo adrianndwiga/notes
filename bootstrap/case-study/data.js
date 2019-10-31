@@ -16,6 +16,13 @@ const monthNames = [
     "November", "December"
 ];
 
+const shortMonthNames = [
+    "Jan", "Feb", "Mar",
+    "Apr", "May", "Jun", "Jul",
+    "Aug", "Sep", "Oct",
+    "Nov", "Dec"
+];
+
 class DateBreakdown {
     constructor(label, start, end) {
         this.label = label;
