@@ -39,6 +39,12 @@ const shortMonthNames = [
     "Dec"
 ];
 
+const dateFormatLabel = {
+    "custom": () => {},
+    "month": () => {},
+    "annual": () => {}
+};
+
 Date.prototype.formatDate = function(format) {
     const dateFormats = {
         "dd MMMM yyyy": () => {},
