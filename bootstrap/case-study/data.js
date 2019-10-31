@@ -23,6 +23,12 @@ class MonthlyBreakdown {
 
 class AnnualBreakdown {
     constructor(start) {
-        const endDate = new Date();
+        const end = new Date();
+        let currentYear = start.getFullYear();
+        this.dates = [];
+        while (currentYear <= end.getFullYear()) {
+            this.dates.push(currentYear);
+            currentYear += 1;
+        }
     }
-}
+} 
