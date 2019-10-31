@@ -46,6 +46,15 @@ class AnnualBreakdown {
 
 class CustomBreakdown {
     constructor(start, end) {
+        this.dates = [];
 
+        const milliseconds = end - start;
+        const today = new Date();
+        const current = new Date(start);
+
+        while(current <= today) {
+            this.dates.push(new Date(current));
+            current.setMilliseconds(current.getMilliseconds() + milliseconds);
+        }
     }
 }
