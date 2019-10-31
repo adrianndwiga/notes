@@ -66,16 +66,27 @@ class DateBreakdown {
 
 class Breakdown {
     constructor(dateLabelFormat, sales, expences, start, end) {
-        const dateFormatLabel = {
+        const dateLabelFormats = {
             "custom": () => {
                 const endShortMonthName = shortMonthNames[end.getMonth()];
                 const startShortMonthName = shortMonthNames[start.getMonth()];
-                return `${start.getDate()}/${startShortMonthName}/${start.getFullYear()} - ${end.getFullYear()}/${endShortMonthName}/${end.getFullYear()} `;
+                return `${start.getDate()}/${startShortMonthName}/${start.getFullYear()} - ${end.getDate()}/${endShortMonthName}/${end.getFullYear()} `;
             },
-            "month": () => {},
-            "annual": () => {}
+            "full-month": () => {
+                const startShortMonthName = shortMonthNames[start.getMonth()];
+                return `${startShortMonthName}/${start.getFullYear()}`;
+            },
+            "full-annual": () => {
+                return `${start.getFullYear()}`;
+            }
         };
+        const selectedLabelFormat = dateLabelFormats[dateLabelFormat];
 
+        if (!selectedLabelFormat) {
+            throw Error(`date label format selected is not supported ${dateLabelFormat}`);
+        }
+
+        const dateLabel = selectedLabelFormat();
         this.dateBreakdown = new DateBreakdown(dateLabel, start, end);
         this.sales = sales;
         this.expences = expences;
