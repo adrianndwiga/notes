@@ -34,9 +34,11 @@ class MonthlyBreakdown {
 
 class AnnualBreakdown {
     constructor(start) {
-        const end = new Date();
-        let current = new Date(start);
         this.dates = [];
+
+        const end = new Date();
+        const current = new Date(start);
+
         while (current <= end) {
             this.dates.push(new Date(current));
             current.setFullYear(current.getFullYear() + 1);
