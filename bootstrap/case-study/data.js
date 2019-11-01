@@ -131,6 +131,11 @@ class CustomBreakdown {
         this.dates = [];
 
         const milliseconds = end - start;
+
+        if(milliseconds < 0) {
+            throw Error($`the start date ${start.toDateString()} cannot be after the end date ${end.toDateString()}`);
+        }
+
         const today = new Date();
         const current = new Date(start);
 
