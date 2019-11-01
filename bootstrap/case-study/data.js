@@ -161,6 +161,8 @@ class Statements {
 
 }
 
+const reportTypes = {};
+
 class Reports {
-    
+
 }
