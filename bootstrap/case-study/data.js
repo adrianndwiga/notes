@@ -83,7 +83,11 @@ class Breakdown {
         const selectedLabelFormat = dateLabelFormats[dateLabelFormat];
 
         if (!selectedLabelFormat) {
-            throw Error(`date label format selected is not supported ${dateLabelFormat}`);
+            const supportedFormats = [];
+            for(let supportedFormat in dateLabelFormat) {
+                supportedFormats.push(supportedFormat);
+            }
+            throw Error(`date label format selected is not supported ${dateLabelFormat} \n supported formats are ${supportedFormats}`);
         }
 
         const dateLabel = selectedLabelFormat();
