@@ -146,6 +146,8 @@ class CustomBreakdown {
     }
 }
 
+const analysisTypes = {};
+
 class Analysis {}
 
 class Projections {}
