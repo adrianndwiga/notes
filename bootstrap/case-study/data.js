@@ -168,3 +168,5 @@ const reportTypes = {};
 class Reports {
 
 }
+
+class NZRelocationFund {}
