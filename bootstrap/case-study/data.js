@@ -177,6 +177,8 @@ class EmergencyFund {}
 
 class CostOfLiving {}
 
-class Company {}
-
-
+class Company {
+    constructor(name) {
+        this.name = name;
+    }
+}
