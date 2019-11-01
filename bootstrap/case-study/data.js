@@ -147,3 +147,5 @@ class CustomBreakdown {
 }
 
 class Analysis {}
+
+class Projections {}
