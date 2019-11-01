@@ -145,3 +145,5 @@ class CustomBreakdown {
         }
     }
 }
+
+class Analysis {}
