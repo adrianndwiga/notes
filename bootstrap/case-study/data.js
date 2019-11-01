@@ -151,7 +151,10 @@ class Analysis {}
 class Projections {}
 
 const statementTypes = {
-    Income_Statement
+    Income_Statement,
+    Balance_Sheet,
+    Cash_Flow,
+    Changes_In_Equity
 }
 
 class Statements {
