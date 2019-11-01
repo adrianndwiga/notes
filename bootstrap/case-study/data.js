@@ -170,3 +170,5 @@ class Reports {
 }
 
 class NZRelocationFund {}
+
+class Pension {}
