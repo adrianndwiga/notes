@@ -160,3 +160,7 @@ const statementTypes = {
 class Statements {
 
 }
+
+class Reports {
+    
+}
