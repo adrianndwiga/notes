@@ -174,3 +174,5 @@ class NZRelocationFund {}
 class Pension {}
 
 class EmergencyFund {}
+
+class CostOfLiving {}
