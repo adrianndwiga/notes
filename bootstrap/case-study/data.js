@@ -176,3 +176,7 @@ class Pension {}
 class EmergencyFund {}
 
 class CostOfLiving {}
+
+class Company {}
+
+
