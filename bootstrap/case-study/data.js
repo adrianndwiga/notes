@@ -150,4 +150,10 @@ class Analysis {}
 
 class Projections {}
 
-class Statements {}
+const statementTypes = {
+    Income_Statement
+}
+
+class Statements {
+
+}
