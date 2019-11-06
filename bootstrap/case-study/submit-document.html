@@ -31,40 +31,66 @@
   <div class="container">
     <h3>Submit document</h3>
     <div class="section">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#submitDocumentModal">
-        Upload document
-      </button>
+      <div class="card mb-3">
+          <div class="card-body">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#submitDocumentModal">
+                  Upload document
+                </button>        
+          </div>
+      </div>
+      <div class="card mb-3">
+        <h5 class="card-header">Pension Summary 2019.pdf</h5>
+        <div class="card-body">
+          <h5 class="card-title">Pension Summary 2019</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary a-btn-slide-text">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            <span><strong>Delete</strong></span>
+          </a>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <h5 class="card-header">Pension Summary 2018.pdf</h5>
+        <div class="card-body">
+          <h5 class="card-title">Pension Summary 2018</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary a-btn-slide-text">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            <span><strong>Delete</strong></span>
+          </a>
+        </div>
+      </div>
     </div>
-    
-        <div class="modal" id="submitDocumentModal" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Upload document</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+
+    <div class="modal" id="submitDocumentModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Upload document</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group mb-3">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile02">
+                <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose
+                  file</label>
               </div>
-              <div class="modal-body">
-                <div class="input-group mb-3">
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose
-                      file</label>
-                  </div>
-                  <div class="input-group-append">
-                    <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Save changes</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <div class="input-group-append">
+                <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
               </div>
             </div>
           </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
-    
+      </div>
+    </div>
+
   </div>
 </body>
 
