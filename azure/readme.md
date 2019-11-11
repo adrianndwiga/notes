@@ -19,6 +19,12 @@
 
 ### VM Settings
 
+### Connecting to a VM
+
+#### SSH for linux
+
+#### RDP for windows
+
 ## Creating a virtual Network
 
 Name
