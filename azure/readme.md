@@ -20,3 +20,20 @@
 ### VM Settings
 
 ## Creating a virtual Network
+
+Name
+
+Address space
+
+Subscription
+
+Resource group
+
+Location
+
+Subnet name
+
+Subnet address range
+
+### Virtual network 
+
