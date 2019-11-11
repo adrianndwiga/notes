@@ -43,3 +43,18 @@ Subnet address range
 
 ### Virtual network 
 
+## Azure CLI
+
+## PowerShell
+
+### AzureRM
+
+### PowerShell Core
+
+## CloudShell
+
+### Azure Drive
+
+### Persisting Data in CloudShell
+
+#### Azure Files
