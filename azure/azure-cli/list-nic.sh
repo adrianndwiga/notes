@@ -1,0 +1,1 @@
+az network nic list --output table
