@@ -1,0 +1,1 @@
+az vm list-ip-addresses --name $vm-name --output table
